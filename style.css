@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+    padding-top: 105px; /* يمنع السكاشن إنها تختفي تحت الـ Navbar الثابت */
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    padding: 10px 8%; /* تقليل الحشو الرأسي للموازنة مع حجم اللوجو الجديد */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95); /* إضافة شفافية خفيفة جداً لمظهر زجاجي فخم */
+    backdrop-filter: blur(5px); /* تأثير ضبابي ناعم خلف الهيدر أثناء الاسكرول */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #8b0000;
+    transition: all 0.3s ease;
+}
+
+/* صندوق اللوجو بعد التكبير والتعديل */
+.logo {
+    overflow: hidden;
+    height: 85px;      /* الارتفاع المثالي لإعطاء مساحة للوجو */
+    width: 175px;      /* العرض المناسب لعرض حروف الاسم بالكامل دون قص */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* تعديل فلتر وقص اللوجو كـ Image */
+.logo img {
+    height: 95px;      /* تكبير الصورة الأساسية لتظهر التفاصيل بوضوح */
+    width: auto;
+    display: block;
+    
+    /* الفلتر السحري لإلغاء الخلفية السوداء */
+    mix-blend-mode: screen; 
+    
+    /* تكبير وقص احترافي لإخفاء الدائرة الخارجية والتركيز على اللوجو والاسم */
+    object-fit: cover;
+    transform: scale(1.85); 
+    
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.95); /* حركة زوم تفاعلية ناعمة ومميزة عند الوقوف بالماوس */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center; /* محاذاة القائمة في السنتر الرأسي تماماً */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e00000;
+}
+
+/* Hero */
+.hero {
+    height: calc(100vh - 105px); /* تحديث الطول بما يتناسب مع حجم الهيدر الجديد */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.9)
+    );
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    color: #e00000;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: #e00000;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px solid #e00000;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(224, 0, 0, 0.5);
+}
+
+.btn:hover {
+    background: transparent;
+    color: #e00000;
+    border-color: #e00000;
+    box-shadow: 0 0 25px rgba(224, 0, 0, 0.8);
+    transform: translateY(-3px); /* حركة ارتفاع بسيطة تعطي شعوراً بالحيوية */
+}
+
+/* Sections */
+section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 40px;
+    color: #e00000;
+    margin-bottom: 30px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 2;
+    color: #ddd;
+}
+
+/* Services */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.service-card {
+    background: #151515;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #330000;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #e00000;
+    box-shadow: 0 10px 30px rgba(224, 0, 0, 0.3); /* توهج أحمر مميز للكروت عند الوقوف عليها */
+}
+
+.service-card h3 {
+    color: #e00000;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 15px;
+}
+
+/* --- تنسيق قسم الاتصال الجديد والـ Form --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    text-align: left;
+    align-items: stretch; /* يضمن تساوى الكرتين في الارتفاع والخط الرأسي */
+}
+
+/* كارت الفورم وكارت الاتصال الموحد */
+.contact-form-container, .contact-info {
+    background: #111;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #330000;
+    box-shadow: 0 0 15px rgba(224, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* توزيع رائع ومثالي للعناصر بالداخل */
+}
+
+.contact-form-container h3, .contact-info h3 {
+    color: #e00000;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #e00000;
+    box-shadow: 0 0 12px rgba(224, 0, 0, 0.4);
+    background: #222;
+}
+
+/* زر إرسال الفورم (أحمر بالكامل) */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: #e00000 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(224, 0, 0, 0.4);
+}
+
+.btn-submit:hover {
+    background: #ff1a1a !important;
+    box-shadow: 0 0 25px rgba(224, 0, 0, 0.7);
+    transform: translateY(-2px);
+}
+
+/* كارت معلومات الاتصال المباشر */
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #e00000;
+}
+
+/* زر انستجرام - تم تعديله ليطابق تماماً تصميم ولون زر الإرسال الأحمر */
+.btn-insta {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #e00000 !important; /* خلفية حمراء صلبة ليتطابق مع زر الإرسال */
+    color: white !important;       /* النص أبيض واضح تماماً */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: none !important;        /* إزالة أي حدود سوداء أو شفافة قديمة */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(224, 0, 0, 0.4); /* نفس تأثير التوهج المضيء */
+    margin-top: auto; /* يضمن نزول الزر لأسفل الكارت بالتوازي مع زر الفورم */
+}
+
+.btn-insta:hover {
+    background: #ff1a1a !important; /* تأثير أحمر مضيء وتفاعلي عند التمرير */
+    box-shadow: 0 0 25px rgba(224, 0, 0, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px) {
+    body {
+        padding-top: 150px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
