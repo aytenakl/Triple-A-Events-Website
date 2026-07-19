@@ -1,26 +1,264 @@
-// Animation for Hero Section
-ScrollReveal().reveal('.animate-hero', {
-    delay: 200,
-    distance: '50px',
-    origin: 'bottom',
-    duration: 1000,
-    interval: 200
-});
+<!DOCTYPE html>
+<html lang="en">
 
-// Animation for Sections
-ScrollReveal().reveal('.reveal-section', {
-    delay: 150,
-    distance: '60px',
-    origin: 'bottom',
-    duration: 1000,
-    viewFactor: 0.2
-});
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-// Animation for Service Cards
-ScrollReveal().reveal('.service-card', {
-    delay: 100,
-    distance: '40px',
-    origin: 'bottom',
-    duration: 800,
-    interval: 150
-});
+    <title>Triple A | Premium Events & Exhibition Management</title>
+
+    <!-- ScrollReveal Animation Library -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo.png">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Triple A Logo">
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+
+            <h1 class="animate-hero">Triple A</h1>
+
+            <h2 class="animate-hero">
+                Premium Events & Exhibition Management
+            </h2>
+
+            <p class="animate-hero">
+                We Create Experiences That Stand Out.
+                Triple A delivers professional event solutions,
+                from creative concepts to flawless execution,
+                creating unforgettable moments for every occasion.
+            </p>
+
+            <a href="#contact" class="btn animate-hero">
+                Contact Us
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="reveal-section">
+
+        <h2>About Triple A</h2>
+
+        <p>
+            Triple A is a full-service event management agency
+            specialized in organizing and managing exhibitions,
+            bazaars, corporate events, and private celebrations.
+            We provide complete solutions that transform ideas
+            into successful experiences through creativity,
+            professionalism, and attention to every detail.
+        </p>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="services" class="reveal-section">
+
+        <h2>Our Services</h2>
+
+        <div class="services-container">
+
+            <div class="service-card">
+                <h3>Bazaars & Exhibitions Management</h3>
+                <p>
+                    Complete exhibition solutions including
+                    space planning, tent setup, vendor coordination,
+                    decoration, and visitor flow management.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <h3>Events & Parties</h3>
+                <p>
+                    Professional planning and execution for
+                    corporate events, private parties,
+                    and grand openings.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <h3>Marketing Campaigns</h3>
+                <p>
+                    Creative campaign strategies,
+                    sales team management, promotions,
+                    and brand activation.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <h3>Ushers & Staffing Services</h3>
+                <p>
+                    Professional ushers, guest management,
+                    crowd organization, and on-ground support.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <h3>Team & Operations Management</h3>
+                <p>
+                    Experienced teams, event organizers,
+                    and complete operational supervision.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section id="why" class="reveal-section">
+
+        <h2>Why Choose Us?</h2>
+
+        <p>
+            At Triple A, we believe every event tells a story.
+            Our experienced team focuses on quality,
+            creativity, and perfect execution to deliver
+            outstanding experiences.
+            We provide reliable solutions, customized ideas,
+            and professional management from start to finish.
+        </p>
+
+    </section>
+
+
+    <!-- Vision -->
+    <section id="vision" class="reveal-section">
+
+        <h2>Our Vision</h2>
+
+        <p>
+            To become a leading agency in event and exhibition
+            management by delivering exceptional quality,
+            creative solutions, and unforgettable experiences
+            that exceed expectations.
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="reveal-section">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-wrapper">
+
+
+            <div class="contact-form-container">
+
+                <h3>Request a Consultation</h3>
+
+                <form id="leadForm">
+
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+
+
+                    <div class="input-group">
+                        <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                    </div>
+
+
+                    <button type="submit" class="btn-submit">
+                        Submit Request
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <div class="contact-info">
+
+                <h3>Get in Touch Directly</h3>
+
+                <p class="phone-link">
+                    📞 Phone:
+                    <a href="tel:01200420194">
+                        01200420194
+                    </a>
+                </p>
+
+
+                <p class="insta-link">
+                    Instagram:
+                    <a href="https://www.instagram.com/_aaa_agency" target="_blank">
+                        @_aaa_agency
+                    </a>
+                </p>
+
+
+                <a href="https://www.instagram.com/_aaa_agency"
+                   target="_blank"
+                   class="btn btn-insta">
+                    Visit Instagram
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Triple A. All Rights Reserved.
+        </p>
+
+
+        <p class="credit">
+            Made by
+            <a href="https://aytenakl.github.io/Due_Two/"
+               class="brand-link"
+               target="_blank">
+                Due Two Company
+            </a>
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
