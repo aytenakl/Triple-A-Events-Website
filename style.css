@@ -313,6 +313,20 @@ footer {
     border-top: 1px solid #1a1a1a;
 }
 
+/* Due Two Company Link */
+.brand-link,
+.brand-link:visited {
+    color: #e00000 !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.brand-link:hover {
+    color: #ff3333 !important;
+    text-decoration: underline;
+}
+
+
 /* Mobile Responsive */
 @media(max-width:768px) {
     body {
