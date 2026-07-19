@@ -388,3 +388,9 @@ footer .brand-link:active {
 .brand-link:hover::after {
     width: 100%;
 }
+/* التعديل لجعل الكارتات فوق بعض في الموبايل */
+@media(max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* جعلها عمود واحد بدلاً من عمودين */
+    }
+}
