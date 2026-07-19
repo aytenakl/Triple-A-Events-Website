@@ -313,6 +313,29 @@ footer {
     border-top: 1px solid #1a1a1a;
 }
 
+.credit {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+footer .brand-link,
+footer .brand-link:link,
+footer .brand-link:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+footer .brand-link:hover {
+    color: #FFD700 !important;
+}
+
+footer .brand-link:active {
+    color: #ffcc00 !important;
+}
+
 /* Mobile Responsive */
 @media(max-width:768px) {
     body {
