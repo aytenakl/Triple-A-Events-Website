@@ -338,19 +338,14 @@ footer {
     .hero h2 {
         font-size: 25px;
     }
-.brand-link {
-    color: #fff;              /* أبيض */
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-
+.brand-link,
 .brand-link:visited {
-    color: #fff;              /* يفضل أبيض بعد الضغط عليه */
+    color: #fff !important;
+    text-decoration: none !important;
 }
 
 .brand-link:hover {
-    color: #FFD700;           /* ذهبي عند الوقوف */
+    color: #FFD700 !important;
 }
 
 .brand-link:active {
