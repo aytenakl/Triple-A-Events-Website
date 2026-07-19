@@ -7,9 +7,7 @@
     <title>Triple A | Premium Events & Exhibition Management</title>
     <!-- استدعاء مكتبة الأنيميشن السلسة -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
 </head>
 
 <body>
@@ -17,7 +15,7 @@
     <nav>
         <div class="logo">
             <!-- مسار اللوجو الجديد -->
-            <img src="logo.png" alt="Triple A Logo">
+            <img src="images/logo.png" alt="Triple A Logo">
         </div>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -147,7 +145,7 @@
             <!-- معلومات التواصل المباشر -->
             <div class="contact-info">
                 <h3>Get in Touch Directly</h3>
-                <p class="phone-link">📞 Phone: 01200420194</p>
+                <p class="phone-link">📞 Phone: <a href="tel:01200420194">01200420194</a></p>
                 <p class="insta-link">Instagram: <a href="https://www.instagram.com/_aaa_agency" target="_blank">@_aaa_agency</a></p>
                 <a href="https://www.instagram.com/_aaa_agency" target="_blank" class="btn btn-insta">Visit Instagram</a>
             </div>
@@ -155,13 +153,37 @@
     </section>
 
     <footer>
-        <p>© 2026 Triple A. All Rights Reserved.</p> 
-<p class="credit">
-    Made by
-    <a href="https://aytenakl.github.io/Due_Two/" class="brand-link" target="_blank">
-        Due Two Company
-    </a>
-</p>
+        <p>© 2026 Triple A. All Rights Reserved.</p>
     </footer>
+
+    <!-- كود الجافا سكريبت لتشغيل الأنيميشن -->
+    <script>
+        // أنيميشن عند تحميل الصفحة للـ Hero
+        ScrollReveal().reveal('.animate-hero', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            interval: 200
+        });
+
+        // أنيميشن ظهور السكاشن تدريجياً أثناء الـ Scroll
+        ScrollReveal().reveal('.reveal-section', {
+            delay: 150,
+            distance: '60px',
+            origin: 'bottom',
+            duration: 1000,
+            viewFactor: 0.2
+        });
+
+        // تشغيل تأثيرات على كروت الخدمات
+        ScrollReveal().reveal('.service-card', {
+            delay: 100,
+            distance: '40px',
+            origin: 'bottom',
+            duration: 800,
+            interval: 150
+        });
+    </script>
 </body>
 </html>
